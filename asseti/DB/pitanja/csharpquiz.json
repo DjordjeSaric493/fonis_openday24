@@ -1,7 +1,9 @@
 {
     "id": "csharpQuiz",
     "title": "C# Kviz",
+    "image_url": "",
     "description": "Osnovna pitanja iz C# sa naglaskom na ispis i greške",
+    "time_seconds": 600,
     "questions": [
       {
         "id": "q1",

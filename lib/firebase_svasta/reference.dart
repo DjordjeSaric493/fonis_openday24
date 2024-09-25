@@ -3,4 +3,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final fireStore = FirebaseFirestore.instance;
-final spisakpitanjaref = fireStore.collection('spisakpitanja');
+final spisakpitanjaref = fireStore.collection('spiskovipitanja');

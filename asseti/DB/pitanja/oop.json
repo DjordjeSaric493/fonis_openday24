@@ -2,8 +2,8 @@
     "id": "oop001",
     "title": "Objektno Orijentisano Programiranje",
     "image_url": "",
-    "Description": "Osnovna pitanja višestrukog izbora (MCQ) iz objektno orijentisanog programiranja za vežbanje OOP koncepata.",
-    "time_seconds": 900,
+    "description": "Osnovna pitanja višestrukog izbora (MCQ) iz objektno orijentisanog programiranja za vežbanje OOP koncepata.",
+    "time_seconds": 600,
     "questions": [
         {
             "id": "oop001q001",
