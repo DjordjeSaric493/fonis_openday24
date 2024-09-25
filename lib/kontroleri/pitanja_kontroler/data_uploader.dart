@@ -67,6 +67,16 @@ Future<void> uploadData() async {
         "question_count":
             spisak.questions == null ? 0 : spisak.questions!.length
       });
+      //prolazi kroz listu koja nije null, poziva referencu i prosleđuje id-eve
+      for (var pitanja in spisak.questions!) {
+        final pitanjaPutanja =
+            pitanjaref(spisakId: spisak.id, pitanjeId: pitanja.id);
+        //batch postavlja pitanje i tačan odgovor
+        batch.set(pitanjaPutanja, {
+          "question": pitanja.question,
+          "correct_answer": pitanja.correctAnswer
+        });
+      }
     }
     await batch
         .commit(); //ko git commit logika, vraćam Future sa početka (sve ili ništa)

@@ -14,7 +14,7 @@
           { "identifier": "C", "answer": "Nothing will be printed" },
           { "identifier": "D", "answer": "Hello" }
         ],
-        "correctAnswer": "A"
+        "correct_answer": "A"
       },
       { "id": "q2",
       "question": "Koja je greška u sledećem C# kodu?\n`csharp\nint x = 5;\nstring y = \"10\";\nConsole.WriteLine(x + y);\n`",
@@ -24,7 +24,7 @@
         { "identifier": "C", "answer": "Nedostaje točka-zarez na kraju linije" },
         { "identifier": "D", "answer": "Nema greške" }
       ],
-      "correctAnswer": "A"
+      "correct_answer": "A"
       },
       {
         "id": "q3",
@@ -35,7 +35,7 @@
           { "identifier": "C", "answer": "Dogodiće se greška (IndexOutOfRangeException)" },
           { "identifier": "D", "answer": "Ništa se neće dogoditi" }
         ],
-        "correctAnswer": "C"
+        "correct_answer": "C"
       },
       {
         "id": "q4",
@@ -46,7 +46,7 @@
           { "identifier": "C", "answer": "bool isTrue = 1;" },
           { "identifier": "D", "answer": "boolean isTrue = \"true\";" }
         ],
-        "correctAnswer": "B"
+        "correct_answer": "B"
       },
       {
         "id": "q5",
@@ -57,7 +57,9 @@
           { "identifier": "C", "answer": "4" },
           { "identifier": "D", "answer": "An error will occur" }
         ],
-        "correctAnswer": "B"
+        "orrect_answer": "B"
       }
     ]
   }
+
+  
