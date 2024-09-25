@@ -1,0 +1,170 @@
+{
+    "id": "datascience001",
+    "title": "Data Science - Test",
+    "image_url": "",
+    "description": "Osnovna pitanja sa više izbora iz oblasti Data Science.",
+    "time_seconds": 600,
+    "questions": [
+        {
+            "id": "datascience001q001",
+            "question": "Na šta se odnosi pojam 'outlier' u statistici?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Na sredinu skupa podataka"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Na modus skupa podataka"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Na ekstremne vrednosti u skupu podataka"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Na standardnu devijaciju skupa podataka"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "datascience001q002",
+            "question": "Čemu služi standardna devijacija?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Za merenje centralne tendencije"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Za merenje raspršenosti podataka"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Za računanje verovatnoća"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Za identifikovanje outlier-a"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "datascience001q003",
+            "question": "Koji je ključni princip KNN (k-najbližih suseda) algoritma?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Minimizacija zbira kvadrata grešaka"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Maksimizacija margine između klasa"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Minimizacija cross-entropy gubitka"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Dodeljivanje podatku najčešće oznake između njegovih k-najbližih suseda"
+                }
+            ],
+            "correct_answer": "D"
+        },
+        {
+            "id": "datascience001q004",
+            "question": "U statistici, šta predstavlja pojam 'p-value' u testiranju hipoteza?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Verovatnoća pravljenja greške II tipa"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Mera verovatnoće da je posmatrana razlika mogla nastati samo slučajnim okolnostima"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Nivo značajnosti za test"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Verovatnoća odbacivanja nulte hipoteze"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "datascience001q005",
+            "question": "Koja je osnovna svrha scatter plot-a?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Prikazivanje raspodele jedne varijable"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Predstavljanje hijerarhijskih odnosa"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Vizualizacija odnosa između dve varijable"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Prikazivanje sažetih statistika skupa podataka"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "datascience001q006",
+            "question": "Koja je svrha termina 'cross-validation' u mašinskom učenju?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Smanjenje složenosti modela"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Procena performansi modela na više podskupova podataka"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Kombinovanje predikcija iz više modela"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Povećanje interpretabilnosti modela"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "datascience001q007",
+            "question": "Koja je svrha termina 'featuere engineering' u mašinskom učenju?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Izvlačenje vrednih informacija iz ciljne varijable"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Kreiranje novih karakteristika ili modifikovanje postojećih kako bi se poboljšale performanse modela"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Biranje najvažnijih karakteristika za treniranje modela"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Normalizacija vrednosti karakteristika kako bi imale sredinu nula i varijansu jedan"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}

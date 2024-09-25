@@ -1,0 +1,194 @@
+{
+    "id": "sql001",
+    "title": "SQL - Test",
+    "image_url": "",
+    "Description": "Osnovna pitanja sa više izbora iz SQL-a za vežbanje",
+    "time_seconds": 900,
+
+    "questions": [
+        {
+            "id": "sql001q001",
+            "question": "Koja od navedenih komandi se koristi za kombinovanje zapisa iz jedne ili više tabela?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "SELECT"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "JOIN"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "CREATE"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "INSERT"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "sql001q002",
+            "question": "Koji od navedenih je važeći tip u SQL-u?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "DECIMAL"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "NUMERIC"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "FLOAT"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Svaki od ponuđenih"
+                }
+            ],
+            "correct_answer": "D"
+        },
+        {
+            "id": "sql001q003",
+            "question": "Koji operator se koristi za poređenje vrednosti sa određenim skupom vrednosti?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "BETWEEN"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "ANY"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "IN"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "ALL"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "sql001q004",
+            "question": "Koje SQL ograničenje se koristi kako bi se osiguralo da su sve vrednosti u koloni jedinstvene?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "PRIMARY KEY"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "UNIQUE"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "CHECK"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "FOREIGN KEY"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "sql001q005",
+            "question": "Napiši SQL upit koji vraća imena zaposlenih čija je plata veća od 50.000:",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "SELECT ime FROM zaposleni HAVING plata > 50000;"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "SELECT ime FROM zaposleni WHERE plata > 50000;"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "SELECT ime FROM zaposleni WHERE plata > '50000';"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "SELECT ime FROM zaposleni GROUP BY plata HAVING plata > 50000;"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "sql001q006",
+            "question": "Napiši SQL upit koji vraća jedinstvene vrednosti iz kolone 'odsek' tabele 'zaposleni'",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "SELECT DISTINCT odsek FROM zaposleni;"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "SELECT UNIQUE odsek FROM zaposleni;"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "SELECT odsek FROM zaposleni DISTINCT;"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "SELECT odsek DISTINCT FROM zaposleni;"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "sql001q007",
+            "question": "Napiši SQL upit koji vraća prosečnu platu svih zaposlenih.",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "SELECT AVERAGE(plata) FROM zaposleni;"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "SELECT AVG(plata) FROM zaposleni;"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "SELECT SUM(plata) / COUNT(plata) FROM zaposleni;"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "SELECT MEAN(plata) FROM zaposleni;"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "sql001q008",
+            "question": "Napiši SQL upit koji vraća imena zaposlenih koji imaju 'Menadzer' u svojim zvanjima.",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "SELECT ime FROM zaposleni WHERE zvanje = 'Menadzer';"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "SELECT ime FROM zaposleni WHERE zvanje LIKE 'Menadzer';"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "SELECT ime FROM zaposleni WHERE zvanje = '%Menadzer%';"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "SELECT ime FROM zaposleni WHERE zvanje LIKE '%Menadzer%';"
+                }
+            ],
+            "correct_answer": "D"
+        }
+    ]
+}
