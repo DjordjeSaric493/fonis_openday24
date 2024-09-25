@@ -1,5 +1,5 @@
 {
-    "id": "ppr001",
+    "id": "git01",
     "title": "Git - Osnove",
     "image_url": "",
     "Description": "Osnovna pitanja sa više izbora iz Git-a za vežbanje",
@@ -7,7 +7,7 @@
 
     "questions": [
         {
-            "id": "ppr001q001",
+            "id": "git01q001",
             "question": "Šta je Git i za šta se koristi?",
             "answers": [
                 {
@@ -30,7 +30,7 @@
             "correct_answer": "B"
         },
         {
-            "id": "ppr001q002",
+            "id": "git01q002",
             "question": "Koja je osnovna komanda za kreiranje novog Git repozitorijuma?",
             "answers": [
                 {
@@ -53,7 +53,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "ppr001q003",
+            "id": "git01q003",
             "question": "Šta će se dogoditi ako izvršite komandu `git status` u novom repozitorijumu bez promena?",
             "answers": [
                 {
@@ -76,7 +76,7 @@
             "correct_answer": "C"
         },
         {
-            "id": "ppr001q004",
+            "id": "git01q004",
             "question": "Kako se dodaju promenjeni fajlovi u Git repozitorijum?",
             "answers": [
                 {
@@ -99,7 +99,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "ppr001q005",
+            "id": "git01q005",
             "question": "Kako se kreira nova grana u Git-u?",
             "answers": [
                 {

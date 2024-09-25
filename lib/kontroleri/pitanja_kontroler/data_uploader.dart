@@ -1,3 +1,8 @@
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:fonis_openday24/modeli/spisak_pitanja_model.dart';
 import 'package:get/get.dart';
 
 //klasa koja nasleđuje GetxController, moš overriduješ šta ti treba
@@ -11,12 +16,49 @@ class DataUploader extends GetxController {
     super.onReady();
   }
 
-  void uploadData() {
-    print("Podatak se šalje/upload in progress");
+//logično da je asinhrona operacija
+  void uploadData() async {
+    //kao u java, za bolji error handling cepam try-catch
+    try {
+      // Proveri da l Get.context nije null
+      if (Get.context != null) {
+        // Učitaj AssetManifest.json datoteku iz asseta
+        final manifestContent = await DefaultAssetBundle.of(Get.context!)
+            .loadString("AssetManifest.json");
+
+        // Parsiranje JSON-a u mapu
+        final Map<String, dynamic> manifestMap = jsonDecode(manifestContent);
+        //filtrira ključeve iz mape manifestMap vrati samo putanje  do json sa pitanjima i sadrži .json
+        final pitanja_U_ASSetima = manifestMap.keys
+            .where((path) =>
+                path.startsWith("asseti/DB/pitanja") && path.contains(".json"))
+            .toList(); //konvertuj putanje u listu
+
+        List<SpisakPitanjaModel> spiskoviPitanja = [];
+
+        for (var pitanja in pitanja_U_ASSetima) {
+          //budem li još jednom stavio ž u naziv promenljive...
+          //štampa sadršaj papira sa pitanjim kao string na konzoli
+          String stringSadrzajPitanja = await rootBundle.loadString(pitanja);
+          //type mismatch da izbegnem, iz json pa on da dekodira sadržaj stringa itd itb
+          spiskoviPitanja.add(
+              SpisakPitanjaModel.fromJson(jsonDecode(stringSadrzajPitanja)));
+        }
+
+        // Dalja logika sa manifestMapa...
+        print(
+            'Sadržaj pod brojem ${spiskoviPitanja[0].id}'); // Testi učitane mape
+      } else {
+        print("Get.context je null. Nmg učitam assete.");
+      }
+    } catch (e) {
+      // Rukovanje greškama (npr. JSON parsing)
+      print("Greška u učitavanju asseta: $e");
+    }
   }
 }
 
- /*zašto pravim kontroler (koji će mi?)
+/*zašto pravim kontroler (koji će mi?)
   -upravljam logikom(upload,data valid,kom sa serverom, UI update blabla)
   -MVVM!!!  MODEL-VIEW-VIEWMODEL   (NE MEŠAJ SA MVM,ozb)
 (VM-viewmodel kontroler upravlja interakcijama između View (ekrana) i Modela (podaci u app) */
