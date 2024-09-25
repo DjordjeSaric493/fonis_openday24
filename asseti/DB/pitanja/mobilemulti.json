@@ -1,0 +1,231 @@
+{
+    "id": "mobile_dev_quiz",
+    "title": "Mobile Development - Cross-platform  Native",
+    "image_url": "",
+    "description": "Pitanja iz razvoja mobilih aplikacija, pokriva native i cross-platform tehnologije",
+    "time_seconds": 1200,
+    "questions": [
+        {
+            "id": "mobile01q001",
+            "question": "Koji programski jezik je primarni za Android razvoj?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Java"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Kotlin"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Swift"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Dart"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "mobile01q002",
+            "question": "Koji programski jezik se koristi za iOS razvoj?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Swift"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Kotlin"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "JavaScript"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Dart"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "mobile01q003",
+            "question": "Koji programski jezik je ključan za programiranje u Flutter-u?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "JavaScript"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Swift"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Dart"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Kotlin"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "mobile01q004",
+            "question": "Koji alat omogućava kreiranje nativnih aplikacija za Android i iOS koristeći JavaScript?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Flutter"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "React Native"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Xamarin"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Cordova"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "mobile01q005",
+            "question": "Kako se zove UI alat koji je deo Android Jetpack-a za pravljenje korisničkih interfejsa koristeći Kotlin?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Jetpack Compose"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Flutter"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "SwiftUI"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "React Native"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "mobile01q006",
+            "question": "Koji framework omogućava pravljenje nativnih aplikacija za iOS i Android koristeći programski jezik Dart?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "React Native"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Flutter"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Cordova"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Xamarin"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "mobile01q007",
+            "question": "Da li se programski jezik Kotlin koristi u industriji automobila za razvoj softvera?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Da"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Ne"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "mobile01q008",
+            "question": "Koji jezik koristi SwiftUI za pravljenje korisničkih interfejsa na iOS-u?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Swift"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Kotlin"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "JavaScript"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Objective-C"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "mobile01q009",
+            "question": "Koji jezik omogućava pisanje multiplatformskih mobilnih aplikacija koje mogu raditi na iOS i Android-u uz deljenje iste logike?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Kotlin"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Swift"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Dart"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Java"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "mobile01q010",
+            "question": "Koji jezik se koristi u Jetpack Compose za deklarativni razvoj korisničkih interfejsa na Android-u?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Kotlin"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Java"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Swift"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "JavaScript"
+                }
+            ],
+            "correct_answer": "A"
+        }
+    ]
+}

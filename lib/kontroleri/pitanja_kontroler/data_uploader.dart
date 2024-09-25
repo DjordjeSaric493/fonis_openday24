@@ -1,7 +1,9 @@
 import 'dart:convert';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fonis_openday24/firebase_svasta/reference.dart';
 import 'package:fonis_openday24/modeli/spisak_pitanja_model.dart';
 import 'package:get/get.dart';
 
@@ -15,48 +17,72 @@ class DataUploader extends GetxController {
     uploadData();
     super.onReady();
   }
+}
 
 //logično da je asinhrona operacija
-  void uploadData() async {
-    //kao u java, za bolji error handling cepam try-catch
-    try {
-      // Proveri da l Get.context nije null
-      if (Get.context != null) {
-        // Učitaj AssetManifest.json datoteku iz asseta
-        final manifestContent = await DefaultAssetBundle.of(Get.context!)
-            .loadString("AssetManifest.json");
+Future<void> uploadData() async {
+  //početna instanca za inicijalizovanje firestore (dodaj cloud_firestore u pubspec.yaml)
+  final fireStore = FirebaseFirestore.instance;
+  //kao u java, za bolji error handling cepam try-catch
 
-        // Parsiranje JSON-a u mapu
-        final Map<String, dynamic> manifestMap = jsonDecode(manifestContent);
-        //filtrira ključeve iz mape manifestMap vrati samo putanje  do json sa pitanjima i sadrži .json
-        final pitanja_U_ASSetima = manifestMap.keys
-            .where((path) =>
-                path.startsWith("asseti/DB/pitanja") && path.contains(".json"))
-            .toList(); //konvertuj putanje u listu
+  // Proveri da l Get.context nije null
+  if (Get.context != null) {
+    // Učitaj AssetManifest.json datoteku iz asseta
+    final manifestContent = await DefaultAssetBundle.of(Get.context!)
+        .loadString("AssetManifest.json");
 
-        List<SpisakPitanjaModel> spiskoviPitanja = [];
+    // Parsiranje JSON-a u mapu
+    final Map<String, dynamic> manifestMap = jsonDecode(manifestContent);
+    //filtrira ključeve iz mape manifestMap vrati samo putanje  do json sa pitanjima i sadrži .json
+    final pitanja_U_ASSetima = manifestMap.keys
+        .where((path) =>
+            path.startsWith("asseti/DB/pitanja") && path.contains(".json"))
+        .toList(); //konvertuj putanje u listu
 
-        for (var pitanja in pitanja_U_ASSetima) {
-          //budem li još jednom stavio ž u naziv promenljive...
-          //štampa sadršaj papira sa pitanjim kao string na konzoli
-          String stringSadrzajPitanja = await rootBundle.loadString(pitanja);
-          //type mismatch da izbegnem, iz json pa on da dekodira sadržaj stringa itd itb
-          spiskoviPitanja.add(
-              SpisakPitanjaModel.fromJson(jsonDecode(stringSadrzajPitanja)));
-        }
+    List<SpisakPitanjaModel> spiskoviPitanja = [];
 
-        // Dalja logika sa manifestMapa...
-        print(
-            'Sadržaj pod brojem ${spiskoviPitanja[0].id}'); // Testi učitane mape
-      } else {
-        print("Get.context je null. Nmg učitam assete.");
-      }
-    } catch (e) {
-      // Rukovanje greškama (npr. JSON parsing)
-      print("Greška u učitavanju asseta: $e");
+    for (var pitanja in pitanja_U_ASSetima) {
+      //budem li još jednom stavio ž u naziv promenljive...
+      //štampa sadršaj papira sa pitanjim kao string na konzoli
+      String stringSadrzajPitanja = await rootBundle.loadString(pitanja);
+      //type mismatch da izbegnem, iz json pa on da dekodira sadržaj stringa itd itb
+      spiskoviPitanja
+          .add(SpisakPitanjaModel.fromJson(jsonDecode(stringSadrzajPitanja)));
     }
+
+    var batch = fireStore.batch();
+    /*mali podestnik iz RMT batch- dozvoljava da grupišem više operacija upisa odjednom u jednu transakciju
+        sve će uspe ili će sve da ode u PN, atomičnost (celovitost) i konzistentnost */
+
+    for (var spisak in spiskoviPitanja) {
+      //iteriram kroz niz objekata spiskoviPitanja
+      batch.set(spisakpitanjaref.doc(spisak.id), {
+        //referenca na doc po id
+        "title": spisak.title, //preko batch.set postavlja podatke koje treba
+        "image_url": spisak.imageUrl,
+        "description": spisak.description,
+        "time_seconds": spisak.timeSeconds,
+        //gledaj dal je definisan niz pitanja, ako nije (tj ==null) postavi na 0
+        // !. operator koji kaže -kućo garanutujem da nije null da bi mogao pristupim (null aware)
+        "question_count":
+            spisak.questions == null ? 0 : spisak.questions!.length
+      });
+      //prolazi kroz listu koja nije null, poziva referencu i prosleđuje id-eve
+      for (var pitanja in spisak.questions!) {
+        final pitanjaPutanja =
+            pitanjaref(spisakId: spisak.id, pitanjeId: pitanja.id);
+        //batch postavlja pitanje i tačan odgovor
+        batch.set(pitanjaPutanja, {
+          "question": pitanja.question,
+          "correct_answer": pitanja.correctAnswer
+        });
+      }
+    }
+    await batch
+        .commit(); //ko git commit logika, vraćam Future sa početka (sve ili ništa)
   }
 }
+
 
 /*zašto pravim kontroler (koji će mi?)
   -upravljam logikom(upload,data valid,kom sa serverom, UI update blabla)

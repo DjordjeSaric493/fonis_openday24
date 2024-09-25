@@ -25,6 +25,7 @@ class SpisakPitanjaModel {
   SpisakPitanjaModel.fromJson(Map<String, dynamic> json)
       : id = json['id'] as String,
         title = json['title'] as String,
+        //imageUrl = json['image_url'] != null ? json['image_url'] as String : null,
         imageUrl = json['image_url'] as String,
         description = json['description'] as String,
         timeSeconds = json['time_seconds'],
@@ -114,3 +115,33 @@ class Answers {
     return data; // Vraća mapu.
   }
 }
+
+/*
+SA ČIM SAM SE NAPATIO:
+RAZLIKA IZMEĐU OVA DVA 
+
+1. Način seljački clASSic (koristan ako hoću dodatnu logiku)
+članovi se inicijalizuju unutar tela konstuktora
+inicijalizuj redom unutar vitičastih zagrada {}
+mogu dodam jop posla sebi tj logiku 
+ Questions.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    question = json['question'];
+  
+    answers = (json['answers'] as List) 
+      .map((e)=>Answers.fromJson(e)).toList();
+    correctAnswer = json['correct_answer']; 
+  }
+
+2. NAČIN inicijalizujem članove (brži, pogodan za jednostavnu dodelu vrednosti)
+initializer list, inicijalizujem članoce klase pre nego što telo konstruktora počne da se izvršava
+bolje ako hoću odmah da postavim vrednosti bez dodatne ligike
+initializer list koristim za direktno postavlanje članova pre nego što pozovem telo konstruktora
+  Questions.fromJson(Map<String, dynamic> json) :
+    id = json['id'],
+    question = json['question'],
+  
+    answers = (json['answers'] as List) 
+      .map((e)=>Answers.fromJson(e)).toList(),
+    correctAnswer = json['correct_answer']; 
+  }*/
