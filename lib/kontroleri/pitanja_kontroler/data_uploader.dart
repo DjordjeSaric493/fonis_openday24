@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fonis_openday24/firebase_svasta/reference.dart';
 import 'package:fonis_openday24/modeli/spisak_pitanja_model.dart';
 import 'package:get/get.dart';
 
@@ -51,6 +52,22 @@ class DataUploader extends GetxController {
         var batch = fireStore.batch();
         /*mali podestnik iz RMT batch- dozvoljava da grupišem više operacija upisa odjednom u jednu transakciju
         sve će uspe ili će sve da ode u PN, atomičnost (celovitost) i konzistentnost */
+
+        for (var spisak in spiskoviPitanja) {
+          //iteriram kroz niz objekata spiskoviPitanja
+          batch.set(spisakpitanjaref.doc(spisak.id), {
+            //referenca na doc po id
+            "title":
+                spisak.title, //preko batch.set postavlja podatke koje treba
+            "image_url": spisak.imageUrl,
+            "description": spisak.description,
+            "time_seconds": spisak.timeSeconds,
+            //gledaj dal je definisan niz pitanja, ako nije (tj ==null) postavi na 0
+            // !. operator koji kaže -kućo garanutujem da nije null da bi mogao pristupim (null aware)
+            "question_count":
+                spisak.questions == null ? 0 : spisak.questions!.length
+          });
+        }
       } else {
         print("Get.context je null. Nmg učitam assete.");
       }
