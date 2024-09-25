@@ -1,16 +1,22 @@
 # fonis_openday24
 
-A new Flutter project.
 
-## Getting Started
+# **WORK IN PROGRESS**
 
-This project is a starting point for a Flutter application.
+*(Đ. Sarić, T. Milojković :heart: :princess:)*  
+<sub>(jer od ostatka fonisa bog digo ruke)</sub>
 
-A few resources to get you started if this is your first Flutter project:
+it team lead  (my minion): *(mali Peđa veliki gospodin)*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🔶 Kviz za potrebe FON Open Day i prezentovanje studentske organizacije FONIS
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Ovaj projekat predstavlja razvoj kviza za promociju FONIS-a tokom FON Open Day 2024 događaja. Ideja je da kroz interaktivnu igru omogućimo posetiocima da na zanimljiv način saznaju više o našoj organizaciji, aktivnostima i timu.
+
+**Napomena:** Projekat je trenutno u fazi razvoja i može biti podložan promenama.
+
+## Kako pokrenuti projekat
+
+1. **Instaliraj potrebne pakete:**
+   ```bash
+   flutter pub get
+Ispratite buduće commitove i grane, merge-ove i šta znam još
