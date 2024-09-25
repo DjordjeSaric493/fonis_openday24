@@ -1,0 +1,124 @@
+{
+    "id": "ppr004",
+    "title": "Uvod u Java programiranje",
+    "image_url": "",
+    "description": "Osnovna pitanja sa više izbora iz Java programiranja za početnike, sa fokusom na liste i izuzetke.",
+    "time_seconds": 600,
+    "questions": [
+        {
+            "id": "ppr004q001",
+            "question": "Šta je lista u Javi i koje su najčešće korištene implementacije?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Uređena kolekcija elemenata, ArrayList i LinkedList"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Neuređena kolekcija elemenata, HashMap i HashSet"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Tip podataka koji može da čuva samo brojeve"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Način za definisanje funkcija"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q002",
+            "question": "Kako dodamo element na kraj ArrayList-e?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "list.add(element)"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "list.insert(element)"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "list.push(element)"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "list.append(element)"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "prr004q003",
+            "question": "Šta je izuzetak u Javi i kada se javlja?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Tip podataka koji se koristi za čuvanje teksta"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Greška koja se javlja tokom izvršavanja programa i prekida njegov normalan tok"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Ključna reč za definisanje metoda"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Način za kreiranje komentara u kodu"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr004q004",
+            "question": "Kako uhvatimo i obradimo izuzetak u Javi?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Koristeći try-catch blok"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Ignorišući ga"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Ponovo pokrećući program"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Menjajući tip podataka"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q005",
+            "question": "Koji izuzetak se baca kada pokušamo da pristupimo elementu niza koji ne postoji?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "NullPointerException"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "ArrayIndexOutOfBoundsException"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "NumberFormatException"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "IllegalArgumentException"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}

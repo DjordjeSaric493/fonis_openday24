@@ -1,0 +1,240 @@
+{
+    "id": "oop001",
+    "title": "Objektno Orijentisano Programiranje",
+    "image_url": "",
+    "Description": "Osnovna pitanja višestrukog izbora (MCQ) iz objektno orijentisanog programiranja za vežbanje OOP koncepata.",
+    "time_seconds": 900,
+    "questions": [
+        {
+            "id": "oop001q001",
+            "question": "Koji je glavni princip objektno orijentisanog programiranja?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Enkapsulacija"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Abstrakcija"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Nasleđivanje"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Sve navedeno"
+                }
+            ],
+            "correct_answer": "D"
+        },
+        {
+            "id": "oop001q002",
+            "question": "Koja od sledećih nije karakteristika OOP-a?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Polimorfizam"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Nasleđivanje"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Proceduralno programiranje"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Enkapsulacija"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "oop001q003",
+            "question": "U OOP-u, šta je klasa?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Šablon za kreiranje objekata"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Instanca objekta"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Funkcija"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Varijabla"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "oop001q004",
+            "question": "Šta je enkapsulacija?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Skrivenost podataka unutar klase"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Mogućnost korišćenja istih metoda u različitim klasama"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Nasleđivanje osobina iz jedne klase u drugu"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Kreiranje objekata"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "oop001q005",
+            "question": "Šta znači polimorfizam u OOP-u?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Mogućnost objekta da se ponaša na različite načine"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Skrivenost podataka"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Kreiranje novih klasa"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Korišćenje globalnih varijabli"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "oop001q006",
+            "question": "Koja je svrha konstruktora u klasi?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Da se uništi objekat"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Da se inicijalizuje objekat"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Da se pozove metoda"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Da se kreira nova klasa"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "oop001q007",
+            "question": "Šta je apstraktna klasa?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Klasa koja ne može biti instancirana"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Klasa koja sadrži samo statičke metode"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Klasa koja se koristi za skladištenje podataka"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Klasa koja može da se instancira"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "oop001q008",
+            "question": "Šta je metoda?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Funkcija koja pripada klasi"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Podaci koji pripadaju klasi"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Klasa koja sadrži funkcije"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Globalna funkcija"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "oop001q009",
+            "question": "Koja je svrha nasleđivanja?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Da se kreira nova klasa na osnovu postojeće"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Da se obrišu metode"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Da se skriveni podaci učine vidljivim"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Da se smanje mogućnosti klasa"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "oop001q010",
+            "question": "Šta je interfejs?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Klasa bez implementacije metoda"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Klasa koja može da se instancira"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Privatna klasa"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Klasa koja sadrži samo statičke metode"
+                }
+            ],
+            "correct_answer": "A"
+        }
+    ]
+}
+

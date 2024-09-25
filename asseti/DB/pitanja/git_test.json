@@ -1,0 +1,125 @@
+{
+    "id": "ppr001",
+    "title": "Git - Osnove",
+    "image_url": "",
+    "Description": "Osnovna pitanja sa više izbora iz Git-a za vežbanje",
+    "time_seconds": 900,
+
+    "questions": [
+        {
+            "id": "ppr001q001",
+            "question": "Šta je Git i za šta se koristi?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Sistem za upravljanje bazama podataka"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Alat za kontrolu verzija koda"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Programski jezik"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Operativni sistem"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr001q002",
+            "question": "Koja je osnovna komanda za kreiranje novog Git repozitorijuma?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "git init"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "git clone"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "git add"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "git commit"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr001q003",
+            "question": "Šta će se dogoditi ako izvršite komandu `git status` u novom repozitorijumu bez promena?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Prikazaće se poruka o grešci"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Prikazaće se lista promenjenih fajlova"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Prikazaće se trenutna grana i status repozitorijuma"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Ništa se neće desiti"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr001q004",
+            "question": "Kako se dodaju promenjeni fajlovi u Git repozitorijum?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "git add <ime_fajla>"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "git push <ime_fajla>"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "git commit <ime_fajla>"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "git clone <ime_fajla>"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr001q005",
+            "question": "Kako se kreira nova grana u Git-u?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "git branch <ime_granate>"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "git checkout <ime_granate>"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "git merge <ime_granate>"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "git pull <ime_granate>"
+                }
+            ],
+            "correct_answer": "A"
+        }
+    ]
+}
