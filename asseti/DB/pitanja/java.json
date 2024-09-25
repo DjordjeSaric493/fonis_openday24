@@ -1,12 +1,12 @@
 {
-    "id": "ppr004",
+    "id": "java01",
     "title": "Uvod u Java programiranje",
     "image_url": "",
     "description": "Osnovna pitanja sa više izbora iz Java programiranja za početnike, sa fokusom na liste i izuzetke.",
     "time_seconds": 600,
     "questions": [
         {
-            "id": "ppr004q001",
+            "id": "java01q001",
             "question": "Šta je lista u Javi i koje su najčešće korištene implementacije?",
             "answers": [
                 {
@@ -29,7 +29,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "ppr004q002",
+            "id": "java01q002",
             "question": "Kako dodamo element na kraj ArrayList-e?",
             "answers": [
                 {
@@ -52,7 +52,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "prr004q003",
+            "id": "java01q003",
             "question": "Šta je izuzetak u Javi i kada se javlja?",
             "answers": [
                 {
@@ -75,7 +75,7 @@
             "correct_answer": "B"
         },
         {
-            "id": "ppr004q004",
+            "id": "java01q004",
             "question": "Kako uhvatimo i obradimo izuzetak u Javi?",
             "answers": [
                 {
@@ -98,7 +98,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "ppr004q005",
+            "id": "java01q005",
             "question": "Koji izuzetak se baca kada pokušamo da pristupimo elementu niza koji ne postoji?",
             "answers": [
                 {
