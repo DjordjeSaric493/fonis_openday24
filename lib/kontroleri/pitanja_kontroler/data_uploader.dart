@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fonis_openday24/modeli/spisak_pitanja_model.dart';
@@ -17,7 +18,9 @@ class DataUploader extends GetxController {
   }
 
 //logično da je asinhrona operacija
-  void uploadData() async {
+  Future<void> uploadData() async {
+    //početna instanca za inicijalizovanje firestore (dodaj cloud_firestore u pubspec.yaml)
+    final fireStore = FirebaseFirestore.instance;
     //kao u java, za bolji error handling cepam try-catch
     try {
       // Proveri da l Get.context nije null
@@ -45,9 +48,9 @@ class DataUploader extends GetxController {
               SpisakPitanjaModel.fromJson(jsonDecode(stringSadrzajPitanja)));
         }
 
-        // Dalja logika sa manifestMapa...
-        print(
-            'Sadržaj pod brojem ${spiskoviPitanja[0].id}'); // Testi učitane mape
+        var batch = fireStore.batch();
+        /*mali podestnik iz RMT batch- dozvoljava da grupišem više operacija upisa odjednom u jednu transakciju
+        sve će uspe ili će sve da ode u PN, atomičnost (celovitost) i konzistentnost */
       } else {
         print("Get.context je null. Nmg učitam assete.");
       }
