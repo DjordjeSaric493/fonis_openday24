@@ -2,7 +2,7 @@
     "id": "sql001",
     "title": "SQL - Test",
     "image_url": "",
-    "Description": "Osnovna pitanja sa više izbora iz SQL-a za vežbanje",
+    "description": "Osnovna pitanja sa više izbora iz SQL-a za vežbanje",
     "time_seconds": 900,
 
     "questions": [

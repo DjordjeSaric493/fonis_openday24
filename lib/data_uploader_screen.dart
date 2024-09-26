@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fonis_openday24/firebase_svasta/loading_status.dart';
 import 'package:fonis_openday24/kontroleri/pitanja_kontroler/data_uploader.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +14,19 @@ class DataUploaderScreen extends StatelessWidget {
   DataUploader controller = Get.put(DataUploader());
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+        body: Center(
+      child: Obx(() => Text(
+          controller.loadingStatus.value == LoadingStatus.completed
+              ? "Upload complete"
+              : "Uploading")),
+    ));
   }
 }
+/*
+build-kreira UI za ekran,scaffold-osnovna struktura ekrana,ceneter prikazuje tekst
+tekst se menja dinamički u zavisnosti od loadingStatus unutar data_uploader.dart
+u zavisnosti od statusa ima poruku (dal je completed)
+koristim Obx omogućuje da se UI automatski update kad menja vresnot loadingStatus
+
+ */
