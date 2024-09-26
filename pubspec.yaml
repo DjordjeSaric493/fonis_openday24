@@ -60,6 +60,8 @@ flutter:
     - asseti/imgs/
     - asseti/DB/pitanja/
     - asseti/icons/
+    - asseti/tara/
+    - asseti/tara/ikonice/  #OBAVEZNO / NA KRAJU IZEM TI YAML
   #TODO: OBAVEZNO ODBOJ OD - I POŠTUJ KAKO SE ODVAJAJU MESTA
   #YAML JE PRILIČNO SMARAČ PO TOM PITANJU
   # An image asset can refer to one or more resolution-specific "variants", see

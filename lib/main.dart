@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fonis_openday24/data_uploader_screen.dart';
+import 'package:fonis_openday24/dependency_bindings/initial_binding.dart';
 import 'package:fonis_openday24/firebase_options.dart';
 import 'package:fonis_openday24/rute/app_routes.dart';
 import 'package:fonis_openday24/scrs/intro_uvodniekran/intro_scr.dart';
@@ -8,6 +9,8 @@ import 'package:fonis_openday24/scrs/splash_screen/splash_scr.dart';
 import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  InitialBinding().dependencies();
   runApp(MyApp());
 }
 
@@ -16,9 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      getPages: AppRoutes.routes(),
-    );
+    return GetMaterialApp(getPages: AppRoutes.routes());
   }
 }
 

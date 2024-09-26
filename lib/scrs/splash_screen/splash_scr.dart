@@ -11,9 +11,9 @@ class SplashScreen extends StatelessWidget {
       body: Center(
         // Koristimo Center widget umesto Container-a za centriranje
         child: Image.asset(
-          "asseti/imgs/app_splash_logo.png",
-          width: 200, // Postaviš širinu slike
-          height: 200, // Postaviš visinu slike
+          "asseti/tara/kevin.png",
+          width: 300, // Postaviš širinu slike
+          height: 300, // Postaviš visinu slike
         ),
       ),
     );
