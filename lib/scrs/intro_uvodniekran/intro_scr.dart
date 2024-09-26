@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fonis_openday24/konfig/teme/app_boje.dart';
 import 'package:fonis_openday24/widgeti/app_circ_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -20,6 +21,7 @@ class AppIntroScr extends StatelessWidget {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
+        decoration: BoxDecoration(gradient: mainGradient(context)),
         child: Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.21),
@@ -29,7 +31,6 @@ class AppIntroScr extends StatelessWidget {
               const Icon(
                 Icons.code,
                 size: 69,
-                color: Colors.orangeAccent,
               ),
               const SizedBox(height: 25), // Razmak između ikonice i teksta
               GestureDetector(
@@ -40,8 +41,9 @@ class AppIntroScr extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16, //veličina slova
-                    color: Colors.orange, //  tekst
-                    decoration: TextDecoration.underline, // Podvlačenje teksta
+                    color: onSurfaceTxtColor, // Boja teksta
+                    // Uklonjena linija ispod teksta
+                    decoration: TextDecoration.none,
                   ),
                 ),
               ),
@@ -55,14 +57,15 @@ class AppIntroScr extends StatelessWidget {
                     FaIcon(
                       FontAwesomeIcons.instagram,
                       size: 40.0,
-                      color: Colors.orangeAccent,
+                      color: Colors.white,
                     ),
                     SizedBox(height: 8),
                     Text(
                       "fonis_fon",
                       style: TextStyle(
-                        color: Colors.black,
-                        decoration: TextDecoration.underline,
+                        color: onSurfaceTxtColor,
+                        // Uklonjena linija ispod teksta
+                        decoration: TextDecoration.none,
                       ),
                     ),
                   ],
@@ -78,14 +81,15 @@ class AppIntroScr extends StatelessWidget {
                     FaIcon(
                       FontAwesomeIcons.github,
                       size: 40.0,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                     SizedBox(height: 8),
                     Text(
                       "GitHub repo",
                       style: TextStyle(
-                        color: Colors.black,
-                        decoration: TextDecoration.underline,
+                        color: onSurfaceTxtColor,
+                        // Uklonjena linija ispod teksta
+                        decoration: TextDecoration.none,
                       ),
                     ),
                   ],
@@ -94,10 +98,11 @@ class AppIntroScr extends StatelessWidget {
               const SizedBox(height: 40),
               AppCircButton(
                 onTap: () => null,
-                width: 60,
+                width: 120,
+                height: 80,
                 child: const Icon(
                   Icons.arrow_forward_ios_outlined,
-                  color: Colors.orangeAccent,
+                  //color: Colors.orangeAccent,
                 ),
               ),
             ],

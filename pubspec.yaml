@@ -36,6 +36,7 @@ dependencies:
     sdk: flutter
   font_awesome_flutter: ^10.7.0
   get: ^4.6.6
+  google_fonts: ^6.2.1
   url_launcher: ^6.3.0
 
 dev_dependencies:
@@ -61,7 +62,7 @@ flutter:
     - asseti/DB/pitanja/
     - asseti/icons/
     - asseti/tara/
-    - asseti/tara/ikonice/  #OBAVEZNO / NA KRAJU IZEM TI YAML
+    - asseti/tara/ikonice/ #OBAVEZNO / NA KRAJU IZEM TI YAML
   #TODO: OBAVEZNO ODBOJ OD - I POŠTUJ KAKO SE ODVAJAJU MESTA
   #YAML JE PRILIČNO SMARAČ PO TOM PITANJU
   # An image asset can refer to one or more resolution-specific "variants", see

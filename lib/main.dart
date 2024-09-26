@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:fonis_openday24/data_uploader_screen.dart';
 import 'package:fonis_openday24/dependency_bindings/initial_binding.dart';
 import 'package:fonis_openday24/firebase_options.dart';
+import 'package:fonis_openday24/konfig/teme/app_dark_tema.dart';
+import 'package:fonis_openday24/konfig/teme/app_light_tema.dart';
+import 'package:fonis_openday24/kontroleri/teme_controller.dart';
 import 'package:fonis_openday24/rute/app_routes.dart';
 import 'package:fonis_openday24/scrs/intro_uvodniekran/intro_scr.dart';
 import 'package:fonis_openday24/scrs/splash_screen/splash_scr.dart';
@@ -19,11 +22,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(getPages: AppRoutes.routes());
+    return GetMaterialApp(
+        theme: AppDarkTema().buildDarkTheme(),
+        //theme: Get.find<TemeController>().lightTheme,
+        getPages: AppRoutes.routes());
   }
 }
-
-
 
 //Konvertuj u async->desni klik refactor convert to async
 //zašto asnihrone->jer oću da interagujem sa Firebase
@@ -38,4 +42,3 @@ Future<void> main() async {
   runApp(GetMaterialApp(home: DataUploaderScreen())); // onaj kao koren widg
   //za razliku od tutorijala ne moram da pišem runApp(GetMaterialApp(options: DefaultFirebaseOptions.currentPlatform));
 }*/
-
